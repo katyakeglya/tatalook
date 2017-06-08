@@ -1,0 +1,200 @@
+<head>
+  <title>TataLook</title>
+  <link rel="icon" sizes="16x16 32x32" href="/favicon.ico?v=2">
+</head>
+
+<body>
+</body>
+
+
+
+
+<!-- LAYOUT -->
+<template name="TataLookLayout">
+	{{> yield "navbar"}}
+	{{> yield "main"}}
+	{{> yield "footer"}}
+</template>
+
+
+
+
+<!-- NAVIGATION -->
+
+<template name="navbar">
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<a href="/"><img src="/Logo.png" id="logo"/></a>
+	  
+			<!-- start collapsed navbar-->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navbar" aria-expanded="false">&#9776;</button>
+			</div><!-- / collapsed navbar-->
+
+			<!-- start un-collapsed navbar-->
+			<div class="collapse navbar-collapse navbar-right" id="main-navbar">
+				<ul class="nav navbar-nav">
+				  <li><a href="story">My Story</a></li>
+				  <li><a href="resume">My Resume</a></li>
+				  <li><a href="albums">My Memories</a></li>
+				  <li><a href="blog">My Blog</a></li>
+				</ul>
+			</div><!-- / un-collapsed navbar-->
+
+			</div> <!-- /container -->
+	</nav>
+</template>
+
+
+
+<!-- WELCOME PAGE -->
+ 
+<template name="welcome">
+	<div class="container">
+		<div class="jumbotron">
+			<h1>Landing page </h1>
+		</div>
+	</div>
+</template>
+
+
+
+
+ <!-- STORY PAGE --> 
+ 
+<template name="story">
+	<div class="container">
+		<div class="jumbotron">
+			<h1>My Story</h1>
+		</div>
+	</div>
+</template>
+
+
+
+
+<!-- RESUME PAGE -->
+
+<template name="resume">
+	<div class="container">
+		<div class="jumbotron">
+			<h1>My work history </h1>
+		</div>
+	</div>
+</template>
+  
+  
+  
+  
+  
+ <!-- ALBUMS PAGE -->
+ 
+<template name="albums">
+	<h1 class="page-title">Cool things I've done</h1>
+	<div class="container">
+	{{> covers}}
+	</div>
+</template>
+	
+
+
+
+
+<!-- BLOG PAGE -->
+<template name="blog">
+	<div class="container">
+		<div class="jumbotron">
+			<h1>My blog</h1>
+		</div>
+	</div>
+</template>
+ 
+ 
+ 
+ 
+ 
+<!-- FOOTER -->
+ <template name="footer">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<div class="footer" id="footer-text">
+	<div class= "navbar navbar-default navbar-right navbar-footer">
+		<ul class="nav navbar-nav navbar-default">
+		<li><a href="mailto:ekaterina.novikova.job@gmail.com" class="social-icon"> <i class="fa fa-envelope"></i></a></li>
+		<li><a href="https://www.linkedin.com/in/katya-novikova/" class="social-icon"> <i class="fa fa-linkedin"></i></a></li>
+		<li><a href="https://www.facebook.com/kate.novikova.keglya" class="social-icon"> <i class="fa fa-facebook"></i></a></li>
+        <li><a href="https://www.instagram.com/katekeglya/?hl=en" class="social-icon"> <i class="fa fa-instagram"></i></a></li>
+		<li><a href="https://www.youtube.com/channel/UCN84mPbeHsvCGrrmopuKY2Q" class="social-icon"> <i class="fa fa-youtube"></i></a></li>
+        <li><a href="https://github.com/katyakeglya" class="social-icon"> <i class="fa fa-github"></i></a></li>
+    </ul>
+	</div>
+	</div>
+</template>
+
+
+
+
+
+<!-- ALBUMS COVERS -->
+<template name="covers">	
+	<div class="container">
+		<div class="row">
+			  
+<div class="col-xs-18 col-sm-6 col-md-3 box">
+			<a href="https://www.google.com"><span class="spanner"></span></a>
+				<div class=thumbnail style="background-image: url(morocco1.jpg);">
+						<div class="caption">
+							<h4>Morocco</h4>
+								<p class="photo-text">Short birthday trip</p>
+						</div>
+				</div>
+			</div>
+		
+			<div class="col-xs-18 col-sm-6 col-md-3 box">
+			<a href="https://www.google.com"><span class="spanner"></span></a>
+				<div class=thumbnail style="background-image: url(italy1.jpg);">
+						<div class="caption">
+							<h4>Italy</h4>
+								<p class="photo-text">Long vacation</p>
+						</div>
+				</div> 
+			</div>
+
+			<div class="col-xs-18 col-sm-6 col-md-3 box">
+				<a href="https://www.google.com"><span class="spanner"></span></a>
+				<div class=thumbnail style="background-image: url(riga2.JPG);">
+
+						<div class="caption">
+							<h4>Riga</h4>
+								<p class="photo-text">Dance trip</p>
+						</div>
+				</div>
+			</div>
+		
+			<div class="col-xs-18 col-sm-6 col-md-3 box">
+			<a href="https://www.google.com"><span class="spanner"></span></a>
+				<div class=thumbnail style="background-image: url(Katya.jpg);">
+						<div class="caption">
+							<h4>America</h4>
+								<p class="photo-text">Exchange program</p>
+						</div>
+				</div>
+			</div>
+			
+			<div class="col-xs-18 col-sm-6 col-md-3 box">
+			<a href="https://www.google.com"><span class="spanner"></span></a>
+				<div class=thumbnail style="background-image: url(italy1.jpg);">
+						<div class="caption">
+							<h4>Camino de Santiago</h4>
+								<p class="photo-text">Intense experience</p>
+						</div>
+				</div> 
+			</div>
+		
+		</div>
+	</div>
+</template>
+
+
+

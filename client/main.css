@@ -1,0 +1,141 @@
+#logo { 
+	float: left;
+	width: 270px;
+}
+
+#main-navbar {
+	font-size:130%;
+	padding: 10px 10px; 
+	display:inline-block;
+	font-family: "Arial Black", Gadget, sans-serif;
+}
+
+/* navbar */
+.navbar-default {
+    background-color: #000000;
+    border-color: #000000;
+}
+
+/* Link */
+.navbar-default .navbar-nav > li > a {
+    color: #1a9293;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: #c61a1a;
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+    color: #1a9293;
+    background-color: #c61a1a;
+}
+
+/* Toggle */
+
+.navbar-default .navbar-toggle {
+  border-color: #c61a1a;
+  background-color: #c61a1a;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+   border-color: #c61a1a;
+   background-color: #c61a1a;
+}
+
+.navbar-default .navbar-toggle:hover {
+  background-color: #1a9293;
+  border-color: #1a9293;
+
+}
+
+
+/*Footer */
+
+.footer {
+  position: absolute;
+  height: 10%;
+  width: 100%;
+  text-align: center;
+  background-color: #000000;
+  border-color: #000000;
+  margin-top:25px;
+}
+
+.navbar-footer {
+	margin-bottom: 0px;
+	margin-right: 10px;
+	font-size:130%;	
+}
+
+/*Page title*/
+
+.page-title {
+	color: #c61a1a;
+	font-family: "Arial Black", Gadget, sans-serif;
+	font-size:230%;
+	margin:25px;
+text-align:center;	
+}
+
+body{
+	background-color: #d1e0e0;
+}
+
+.thumbnail {
+    width: 250px;
+    height: 200px;
+    display: inline-block; /* makes it fit in like an <img> */
+    background-size: cover; /* or contain */
+    background-position: center center;
+    background-repeat: no-repeat;
+	margin-top:10px;
+	border-color:black;
+}
+
+.caption {
+	width: 250px;
+	height: 80px;
+	margin-top:195px;
+	margin-left:0px;
+}
+
+.box {
+	background-color: black;
+	width: 280px;
+	height: 300px;
+	margin-right: 10px;
+	border-radius: 5px;
+	position: relative;
+	margin-bottom: 20px;
+}
+
+.box:hover {
+	box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.spanner {
+  position:absolute; 
+  width:100%;
+  height:100%;
+  top:0;
+  left: 0;
+
+  z-index: 1;
+}
+
+h4 {
+	color: #1a9293;
+	font-family: "Arial Black", Gadget, sans-serif;
+	font-size:130%;
+}
+
+.photo-text {
+	color: #1a9293;
+	font-family: "Arial", Gadget, sans-serif;
+	font-size:100%;
+}
+
+
+
