@@ -1,198 +1,456 @@
 <head>
-  <title>TataLook</title>
-  <link rel="icon" sizes="16x16 32x32" href="/favicon.ico?v=2">
+    <title>TataLook</title>
+    <link rel="icon" sizes="16x16 32x32" href="/favicon.ico?v=2">
 </head>
 
 <body>
 </body>
 
 
-
-
 <!-- LAYOUT -->
 <template name="TataLookLayout">
-	{{> yield "navbar"}}
-	{{> yield "main"}}
-	{{> yield "footer"}}
+    {{> yield "navbar"}}
+    {{> yield "main"}}
+    {{> yield "footer"}}
 </template>
-
-
 
 
 <!-- NAVIGATION -->
 
 <template name="navbar">
-	<nav class="navbar navbar-default">
-		<div class="container-fluid">
-			<a href="/"><img src="/Logo.png" id="logo"/></a>
-	  
-			<!-- start collapsed navbar-->
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navbar" aria-expanded="false">&#9776;</button>
-			</div><!-- / collapsed navbar-->
 
-			<!-- start un-collapsed navbar-->
-			<div class="collapse navbar-collapse navbar-right" id="main-navbar">
-				<ul class="nav navbar-nav">
-				  <li><a href="story">My Story</a></li>
-				  <li><a href="resume">My Resume</a></li>
-				  <li><a href="albums">My Memories</a></li>
-				  <li><a href="blog">My Blog</a></li>
-				</ul>
-			</div><!-- / un-collapsed navbar-->
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <a href="/"><img src="/Logo.png" id="logo"/></a>
 
-			</div> <!-- /container -->
-	</nav>
+            <!-- start collapsed navbar-->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mainNavbar"
+                        aria-expanded="false">&#9776;</button>
+            </div><!-- / collapsed navbar-->
+
+            <!-- start un-collapsed navbar-->
+            <div class="collapse navbar-collapse navbar-right" id="mainNavbar">
+                <ul class="nav navbar-nav">
+                    <li><a href="story">My Story</a></li>
+                    <li><a href="resume">My Resume</a></li>
+                    <li><a href="albums">My Memories</a></li>
+                    <li><a href="blog">My Blog</a></li>
+                </ul>
+            </div><!-- / un-collapsed navbar-->
+
+        </div> <!-- /container -->
+    </nav>
+
 </template>
-
 
 
 <!-- WELCOME PAGE -->
- 
+
 <template name="welcome">
 	<div class="container">
-		<div class="jumbotron">
-			<h1>Landing page </h1>
+		<div class="row">
+			<div id="greetings" class="greetings col-sm-6 col-md-6 col-lg-6" data-content="greetings" data-center="true">
+				<div class="base">
+					<div class="text">
+						<span class="g-hi"> Hi! </span>
+						<span class="g-my"> My name is </span>
+						<span class="g-go"> Katya </span>
+						<span class="g-eka"> (my passport says Ekaterina) </span>
+						<span class="g-nov"> Novikova </span>
+						<span class="g-and"> and I am a </span>
+						<span class="g-24"> 24 </span>
+						<span class="g-ye"> year old </span>
+						<span class="g-ts"> tech sourcer </span>
+						<span class="g-born"> who was born in </span>
+						<span class="g-ru"> Russia </span>
+						<span class="g-liv"> and lives in </span>
+						<span class="g-nl"> the Netherlands </span>
+						<span class="g-ni"> Nice to meet you! </span>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-6 col-lg-6">
+				<img class="front-image" src="Emma.png"/>
+			</div>
 		</div>
 	</div>
 </template>
 
 
+<!-- STORY PAGE -->
 
-
- <!-- STORY PAGE --> 
- 
 <template name="story">
-	<div class="container">
-		<div class="jumbotron">
-			<h1>My Story</h1>
-		</div>
-	</div>
+    <div class="container">
+        <div class="jumbotron">
+            <h1>My Story</h1>
+        </div>
+    </div>
 </template>
-
-
 
 
 <!-- RESUME PAGE -->
 
 <template name="resume">
 	<div class="container">
-		<div class="jumbotron">
-			<h1>My work history </h1>
-		</div>
+		<div class="row">
+			<div id="greetings" class="greetings col-sm-7 col-md-7 col-lg-7" data-content="greetings" data-center="true">
+				<div class="base">
+				
+					<div class="text">
+						<p class="date"> March 2017 - Present </p>
+						<img class="icon" src="Waes.jpg"/>
+						<p class="position"> Tech Sourcer </p>
+						<p class="company"> WAES Science & Technology </p>
+						<p class="place"> Eindhoven, NL </p>
+						<p class="description"> Description </p>
+					</div>
+					
+					<div class="text">
+						<p class="date"> January 2016 - December 2016 </p>
+						<img class="icon" src="kjt.png"/>
+						<p class="position"> Research Assisstant </p>
+						<p class="company"> KJT Group </p>
+						<p class="place"> Amsterdam, NL </p>
+						<p class="description"> Description </p>
+					</div>
+					
+					<div class="text">
+						<p class="date"> January 2015 - December 2015 </p>
+						<img class="icon" src="nidi.jpg"/>
+						<p class="position"> Research Intern </p>
+						<p class="company"> NiDi </p>
+						<p class="place"> Den Haag, NL </p>
+						<p class="description"> Description </p>
+					</div>
+					
+				</div>
+			</div>
+			<div class="col-sm-5 col-md-5 col-lg-5">
+				<img class="cv-image" src="Emma2.png"/>
+			</div>
+		</div>		
+		
 	</div>
 </template>
-  
-  
-  
-  
-  
- <!-- ALBUMS PAGE -->
- 
+
+
+<!-- ALBUMS PAGE -->
+
 <template name="albums">
-	<h1 class="page-title">Cool things I've done</h1>
-	<div class="container">
-	{{> covers}}
-	</div>
+    <h1 class="page-title">Cool things I've done</h1>
+    <div class="container">
+        {{> covers}}
+    </div>
 </template>
-	
-
-
 
 
 <!-- BLOG PAGE -->
 <template name="blog">
-	<div class="container">
-		<div class="jumbotron">
-			<h1>My blog</h1>
-		</div>
-	</div>
+    <div class="container">
+        <div class="jumbotron">
+            <h1>My blog</h1>
+        </div>
+    </div>
 </template>
- 
- 
- 
- 
- 
+
+
 <!-- FOOTER -->
- <template name="footer">
+<template name="footer">
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-	<div class="footer" id="footer-text">
-	<div class= "navbar navbar-default navbar-right navbar-footer">
-		<ul class="nav navbar-nav navbar-default">
-		<li><a href="mailto:ekaterina.novikova.job@gmail.com" class="social-icon"> <i class="fa fa-envelope"></i></a></li>
-		<li><a href="https://www.linkedin.com/in/katya-novikova/" class="social-icon"> <i class="fa fa-linkedin"></i></a></li>
-		<li><a href="https://www.facebook.com/kate.novikova.keglya" class="social-icon"> <i class="fa fa-facebook"></i></a></li>
-        <li><a href="https://www.instagram.com/katekeglya/?hl=en" class="social-icon"> <i class="fa fa-instagram"></i></a></li>
-		<li><a href="https://www.youtube.com/channel/UCN84mPbeHsvCGrrmopuKY2Q" class="social-icon"> <i class="fa fa-youtube"></i></a></li>
-        <li><a href="https://github.com/katyakeglya" class="social-icon"> <i class="fa fa-github"></i></a></li>
-    </ul>
-	</div>
-	</div>
+    <div class="footer" id="footer-text">
+        <div class="navbar navbar-default navbar-right navbar-footer">
+            <ul class="nav navbar-nav navbar-default">
+                <li><a href="mailto:ekaterina.novikova.job@gmail.com" class="social-icon"> <i
+                        class="fa fa-envelope"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/katya-novikova/" class="social-icon"> <i
+                        class="fa fa-linkedin"></i></a></li>
+                <li><a href="https://www.facebook.com/kate.novikova.keglya" class="social-icon"> <i
+                        class="fa fa-facebook"></i></a></li>
+                <li><a href="https://www.instagram.com/katekeglya/?hl=en" class="social-icon"> <i
+                        class="fa fa-instagram"></i></a></li>
+                <li><a href="https://www.youtube.com/channel/UCN84mPbeHsvCGrrmopuKY2Q" class="social-icon"> <i
+                        class="fa fa-youtube"></i></a></li>
+                <li><a href="https://github.com/katyakeglya" class="social-icon"> <i class="fa fa-github"></i></a></li>
+            </ul>
+        </div>
+    </div>
 </template>
-
-
-
 
 
 <!-- ALBUMS COVERS -->
-<template name="covers">	
-	<div class="container">
-		<div class="row">
-			  
-<div class="col-xs-18 col-sm-6 col-md-3 box">
-			<a href="https://www.google.com"><span class="spanner"></span></a>
-				<div class=thumbnail style="background-image: url(morocco1.jpg);">
+<template name="covers">
+    <div class="container">
+        <div class="row">
+		
+
+
+			<!-- MOROCCO -->
+			<div class="col-sm-12 col-md-3 col-lg-3 box">
+				<a href="#" data-toggle="modal" data-target=".morocco-trip"><span class="spanner"></span></a>
+					<div class=thumbnail style="background-image: url(morocco1.jpg);">
+
 						<div class="caption">
 							<h4>Morocco</h4>
-								<p class="photo-text">Short birthday trip</p>
+							<p class="photo-text">Short birthday trip</p>
 						</div>
+					
+					</div>
+            </div>
+
+
+			<div class="modal fade morocco-trip" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+			<div id="carousel-morocco" class="carousel slide" data-ride="carousel">
+
+  
+
+			<!-- Wrapper for slides -->
+				<div class="carousel-inner">
+
+					<div class="item active">
+						<img class="img-responsive" src="morocco1.jpg" alt="...">
+					</div>
+				
+					<div class="item">
+						<img class="img-responsive" src="morocco2.jpg" alt="...">
+					</div>
+
+					<div class="item">
+						<img class="img-responsive" src="morocco3.jpg" alt="...">
+					</div>
+					
+					<div class="item">
+						<img class="img-responsive" src="morocco4.jpg" alt="...">
+					</div>
+				
+					<div class="item">
+						<img class="img-responsive" src="morocco5.jpg" alt="...">
+					</div>
+
+					<div class="item">
+						<img class="img-responsive" src="morocco6.jpg" alt="...">
+					</div>
+					
+					<div class="item">
+						<img class="img-responsive" src="morocco7.jpg" alt="...">
+					</div>
+				
 				</div>
+
+			<!-- Controls -->
+				<a class="left carousel-control" href="#carousel-morocco" role="button" data-slide="prev">
+					<span class="glyphicon glyphicon-chevron-left"></span>
+				</a>
+				
+				<a class="right carousel-control" href="#carousel-morocco" role="button" data-slide="next">
+					<span class="glyphicon glyphicon-chevron-right"></span>
+				</a>
+			
 			</div>
-		
-			<div class="col-xs-18 col-sm-6 col-md-3 box">
-			<a href="https://www.google.com"><span class="spanner"></span></a>
-				<div class=thumbnail style="background-image: url(italy1.jpg);">
+			</div>
+			</div>
+			</div>
+
+
+			<!-- ITALY -->
+			<div class="col-sm-12 col-md-3 col-lg-3 box">
+				<a href="#" data-toggle="modal" data-target=".italy-trip"><span class="spanner"></span></a>
+					<div class=thumbnail style="background-image: url(italy1.jpg);">
+
 						<div class="caption">
 							<h4>Italy</h4>
-								<p class="photo-text">Long vacation</p>
+							<p class="photo-text">Summer vacation</p>
 						</div>
-				</div> 
+					
+					</div>
+            </div>
+
+
+			<div class="modal fade italy-trip" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+			<div id="carousel-italy" class="carousel slide" data-ride="carousel">
+
+  
+
+			<!-- Wrapper for slides -->
+				<div class="carousel-inner">
+
+					<div class="item active">
+						<img class="img-responsive" src="italy1.jpg" alt="...">
+					</div>
+				
+					<div class="item">
+						<img class="img-responsive" src="italy2.jpg" alt="...">
+					</div>
+
+					<div class="item">
+						<img class="img-responsive" src="italy3.jpg" alt="...">
+					</div>
+					
+					<div class="item">
+						<img class="img-responsive" src="italy4.jpg" alt="...">
+					</div>
+				
+					<div class="item">
+						<img class="img-responsive" src="italy5.jpg" alt="...">
+					</div>
+
+					<div class="item">
+						<img class="img-responsive" src="italy6.jpg" alt="...">
+					</div>
+					
+					<div class="item">
+						<img class="img-responsive" src="italy7.jpg" alt="...">
+					</div>
+				
+				</div>
+
+			<!-- Controls -->
+				<a class="left carousel-control" href="#carousel-italy" role="button" data-slide="prev">
+					<span class="glyphicon glyphicon-chevron-left"></span>
+				</a>
+				
+				<a class="right carousel-control" href="#carousel-italy" role="button" data-slide="next">
+					<span class="glyphicon glyphicon-chevron-right"></span>
+				</a>
+			
+			</div>
+			</div>
+			</div>
 			</div>
 
-			<div class="col-xs-18 col-sm-6 col-md-3 box">
-				<a href="https://www.google.com"><span class="spanner"></span></a>
-				<div class=thumbnail style="background-image: url(riga2.JPG);">
+
+
+						<!-- ITALY -->
+			<div class="col-sm-12 col-md-3 col-lg-3 box">
+				<a href="#" data-toggle="modal" data-target=".riga-trip"><span class="spanner"></span></a>
+					<div class=thumbnail style="background-image: url(riga2.jpg);">
 
 						<div class="caption">
-							<h4>Riga</h4>
-								<p class="photo-text">Dance trip</p>
+							<h4>Latvia</h4>
+							<p class="photo-text">Dance trip</p>
 						</div>
+					
+					</div>
+            </div>
+
+
+			<div class="modal fade riga-trip" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+			<div id="carousel-riga" class="carousel slide" data-ride="carousel">
+
+  
+
+			<!-- Wrapper for slides -->
+				<div class="carousel-inner">
+
+					<div class="item active">
+						<img class="img-responsive" src="riga2.jpg" alt="...">
+					</div>
+				
+					<div class="item">
+						<img class="img-responsive" src="riga1.jpg" alt="...">
+					</div>
+
+					<div class="item">
+						<img class="img-responsive" src="riga3.jpg" alt="...">
+					</div>
+					
+					<div class="item">
+						<img class="img-responsive" src="riga4.jpg" alt="...">
+					</div>
+				
+					<div class="item">
+						<img class="img-responsive" src="riga5.jpg" alt="...">
+					</div>
+
+					<div class="item">
+						<img class="img-responsive" src="riga6.jpg" alt="...">
+					</div>
+					
+					<div class="item">
+						<img class="img-responsive" src="riga7.jpg" alt="...">
+					</div>
+				
 				</div>
+
+			<!-- Controls -->
+				<a class="left carousel-control" href="#carousel-riga" role="button" data-slide="prev">
+					<span class="glyphicon glyphicon-chevron-left"></span>
+				</a>
+				
+				<a class="right carousel-control" href="#carousel-riga" role="button" data-slide="next">
+					<span class="glyphicon glyphicon-chevron-right"></span>
+				</a>
+			
 			</div>
-		
-			<div class="col-xs-18 col-sm-6 col-md-3 box">
-			<a href="https://www.google.com"><span class="spanner"></span></a>
-				<div class=thumbnail style="background-image: url(Katya.jpg);">
-						<div class="caption">
-							<h4>America</h4>
-								<p class="photo-text">Exchange program</p>
-						</div>
-				</div>
+			</div>
+			</div>
 			</div>
 			
-			<div class="col-xs-18 col-sm-6 col-md-3 box">
-			<a href="https://www.google.com"><span class="spanner"></span></a>
-				<div class=thumbnail style="background-image: url(italy1.jpg);">
-						<div class="caption">
-							<h4>Camino de Santiago</h4>
-								<p class="photo-text">Intense experience</p>
-						</div>
-				</div> 
-			</div>
+			
+			
+			
+			
 		
+
+            <div class="col-sm-12 col-md-3 col-lg-3 box">
+                <a href="https://www.google.com"><span class="spanner"></span></a>
+                <div class=thumbnail style="background-image: url(Katya.jpg);">
+                    <div class="caption">
+                        <h4>America</h4>
+                        <p class="photo-text">Exchange program</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-md-3 col-lg-3 box">
+                <a href="https://www.google.com"><span class="spanner"></span></a>
+                <div class=thumbnail style="background-image: url(italy1.jpg);">
+                    <div class="caption">
+                        <h4>Camino de Santiago</h4>
+                        <p class="photo-text">Intense experience</p>
+                    </div>
+                </div>
+            </div>
+			
 		</div>
+    </div>
+</template>
+			
+			
+<template name="morocco">	
+<h1 class="page-title"><span><a class="blue" href="/albums"> My memories >> </a></span> Morocco</h1>
+
+    <div class="container">
+        <div class="row">
+		<div class="col-md-2 col-lg-2">
+		</div>
+		<div class="col-sm-12 col-md-8 col-lg-8">
+	<div id="myCarousel" class="carousel slide">
+		<ol class="carousel-indicators">
+			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+			<li data-target="#myCarousel" data-slide-to="1"></li>
+			<li data-target="#myCarousel" data-slide-to="2"></li>
+		</ol>
+  <!-- Carousel items -->
+	<div class="carousel-inner">
+		<div class="active item"><img src="Katya.jpg"></div>
+		<div class="item"><img src="riga2.JPG"></div>
+		<div class="item"><img src="morocco1.jpg"></div>
+	</div>
+  <!-- Carousel nav -->
+  <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+  <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+	</div>
+	</div>
+	</div>
 	</div>
 </template>
 

@@ -63,4 +63,14 @@ Router.route('/blog', function () {
   });
 });
     
-
+Router.route('/albums/morocco', function () {
+  this.render('navbar', {
+	to:"navbar"
+  });
+  this.render('morocco', {
+	to:"main"
+  });
+  this.render('footer', {
+	to:"footer"
+  });
+});

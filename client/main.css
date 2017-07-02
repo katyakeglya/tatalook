@@ -1,19 +1,72 @@
+
+/*Begin css reset*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/*End css reset*/
+
 #logo { 
 	float: left;
 	width: 270px;
 }
 
 #main-navbar {
-	font-size:130%;
 	padding: 10px 10px; 
 	display:inline-block;
-	font-family: "Arial Black", Gadget, sans-serif;
+}
+
+.navbar-nav{
+	padding-top:7px;
 }
 
 /* navbar */
 .navbar-default {
     background-color: #000000;
     border-color: #000000;
+	font-size:20px; 
 }
 
 /* Link */
@@ -55,32 +108,33 @@
 
 .footer {
   position: absolute;
-  height: 10%;
+  height: 12%;
   width: 100%;
   text-align: center;
   background-color: #000000;
   border-color: #000000;
-  margin-top:25px;
+  margin-right:px;
 }
 
+  
 .navbar-footer {
 	margin-bottom: 0px;
-	margin-right: 10px;
-	font-size:130%;	
+	margin-right: 20px;
+	font-size:25px;	
 }
 
 /*Page title*/
 
 .page-title {
 	color: #c61a1a;
-	font-family: "Arial Black", Gadget, sans-serif;
-	font-size:230%;
+	font-size:35px;
 	margin:25px;
-text-align:center;	
+	text-align:center;	
 }
 
 body{
 	background-color: #d1e0e0;
+	font-family: "Arial Black", Gadget, sans-serif;
 }
 
 .thumbnail {
@@ -127,15 +181,234 @@ body{
 
 h4 {
 	color: #1a9293;
-	font-family: "Arial Black", Gadget, sans-serif;
-	font-size:130%;
+	font-size:20px;
 }
 
 .photo-text {
 	color: #1a9293;
-	font-family: "Arial", Gadget, sans-serif;
-	font-size:100%;
+	font-size:15px;
+}
+
+.container-scroll{
+
+    overflow: scroll;
+    height:300px;
+}
+
+.blue {
+	color: #1a9293;
+}
+
+.blue:hover {
+	color: #1a9293;
+	text-decoration:none;
+}
+
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+  max-height: 100%;
+  max-height: 500px;
+  height:auto;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  z-index: 10;
+    background: rgba(0, 0, 0, 0.45);
+}
+
+/* Declare heights because of positioning of img element */
+.carousel .item {
+  max-height: 100%;
+  max-height: 500px;
+  background-color: black;
+}
+.carousel-inner > .item > img {
+ /*  position: absolute;*/
+  top: 0;
+  left: 0;
+  min-width: 40%;
+  max-width: 100%;
+  max-height: 500px;
+  width: auto;
+  margin-right:auto;
+  margin-left:auto;
+  height:auto;
+
+}
+
+.front-image {
+	height:560px;
+    margin-left: 200px;
+    left: 50%;
+    top: 4.375em;	
 }
 
 
 
+/* LANDING PAGE TEXT
+-------------------------------------------------- */
+
+.g-hi, .g-my, .g-nov, .g-and, .g-born, .g-ru, .g-liv, .g-nl {
+	display: inline-block;	
+}
+
+.g-go, .g-eka, .g-24, .g-ye, .g-ts, .g-ni {
+	display: block;
+}
+
+.g-hi, .g-go, .g-nov, .g-24, .g-ts, .g-born, .g-nl {
+	font-weight: 700;
+}
+
+.g-go, .g-nov {
+	color: #c61a1a;
+}
+
+.g-24, .g-ts, .g-ru, .g-nl {
+	color: #1a9293;
+}
+
+.g-eka, .g-ts, .g-ru {
+	text-align: right;
+}
+
+.g-hi {
+	font-size: 5.5em;
+	line-height: 1em;
+}
+
+.g-my {
+	font-size: 2.5em;
+    line-height: .85em;
+	    margin-left: .3141em;
+    margin-right: -30px;
+}
+
+.g-go {
+	    font-size: 6.375em;
+    line-height: .78em;
+
+}
+
+.g-eka {
+	font-size: .9em;
+    line-height: 1.7em;
+	margin-right:1.3141em;
+}
+
+.g-nov {
+	    font-size: 4em;
+    line-height: 1.1em;
+	margin-top:-10px;
+}
+
+.g-and {
+	font-size: 2.1875em;
+    margin-left: .3141em;
+    margin-right: -10px;
+}
+
+.g-24 {
+	font-size: 5.8em;
+    float: left;
+    line-height: 1em;
+	margin-left:100px;
+	margin-right:17px;
+}
+
+.g-ye {
+	font-size: 2.48em;
+    line-height: 1.5em;
+	margin-top:-10px;
+}
+
+.g-ts {
+	font-size: 2.3em;
+    line-height: 1.12em;
+    margin-bottom: 9px;
+	margin-top: -7px;
+}
+
+.g-born {
+	    font-size: 2em;
+    line-height: .78em;
+}
+.g-ru {
+	font-size: 4em;
+    margin-left: .3141em;
+    margin-right: -10px;
+}
+
+.g-liv {
+	font-size: 1em;
+    line-height: 1.7em;
+}
+.g-nl {
+	    font-size: 3em;
+    line-height: .78em;
+}		
+
+.g-ni {
+	font-size: 3.7em;
+    line-height: 1em;
+    white-space: nowrap;
+	margin-bottom: 50px;
+}
+	
+.date {
+	font-size: 1em;
+	color: #000000;
+	display: block;
+	white-space: nowrap;
+	margin-top: 35px;
+}
+
+.position {
+	font-size: 2.5em;
+	color: #c61a1a;
+	display: block;
+	white-space: nowrap;
+	margin-top: 4px;
+	margin-bottom: 3px;
+}
+
+.company {
+	font-size: 1.5em;
+	color: #1a9293;
+	display: block;
+	white-space: nowrap;
+	margin-bottom: 5px;
+	
+}
+
+.icon {
+	width: 60px;
+	margin-top: 10px;
+	margin-right: 10px;
+	float: left;
+	border-color: black;
+	border-width: 0.5px;
+	border-style: solid;
+}
+
+.place {
+	font-size: 1em;
+	color: #000000;
+	display: block;
+	white-space: nowrap;
+	margin-bottom: 20px;	
+}
+
+.description {
+	
+}
+
+.cv-image {
+	height:700px;
+    left: 50%;
+    top: 4.375em;	
+}
